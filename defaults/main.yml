@@ -1,0 +1,5 @@
+---
+# defaults file for rancher
+
+rancher_server_tag: latest
+rancher_server_port: 8080

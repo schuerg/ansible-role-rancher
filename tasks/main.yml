@@ -1,0 +1,20 @@
+---
+# tasks file for rancher
+
+- name: Start Rancher as a Docker Container
+  docker_container:
+    name: rancher_server
+    image: rancher/server:{{ rancher_server_tag }}
+    restart_policy: always
+    published_ports: {{ rancher_server_port }}:8080
+
+- name: Wait for the daemon to start up
+  wait_for: port={{ rancher_server_port }}
+
+# - name: Enable Authentication
+
+# - name: Create Rancher user
+
+# - name: Register Host
+
+# - name: Create Rancher Environment
