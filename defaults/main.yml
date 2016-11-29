@@ -1,5 +1,8 @@
 ---
 # defaults file for rancher
 
+rancher_server_ipv4: 127.0.0.1
 rancher_server_tag: latest
 rancher_server_port: 8080
+rancher_server_name: "rancher_server"
+rancher_agent_name: "rancher_agent"
